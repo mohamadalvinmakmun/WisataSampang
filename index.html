@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Sampang - Pesona Madura Timur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="logo-text">
+                    Wisata<span>Sampang</span>
+                </div>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="#wisata"><i class="fas fa-umbrella-beach"></i> Wisata</a></li>
+                    <li><a href="#kuliner"><i class="fas fa-utensils"></i> Kuliner</a></li>
+                    <li><a href="#sejarah"><i class="fas fa-landmark"></i> Sejarah</a></li>
+                    <li><a href="#tentang"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGMhFIzKtT8g5WEOQ_-NsHxqHNc3PFHYY8UWF9_rVV1d4U7Bj_ky8ODzk1nxKMRAi2EXXPr4mIG3MjKR5BCbyDNq4KSSpGfHM3q4tH-UD8P7qd9MWMOBmzAnkls2D4pL5H-XRvkF0lHjX2fZoqo6kcNAnfzYHgoLeKla_EQI3aPiy5-waq2Q6lSpjJ/s1280/alun%20alun%20terbesar%20di%20kabupaten%20sampang.jpg');">
+                <div class="hero-content">
+                    <h1>Menjelajahi Keindahan Sampang Madura</h1>
+                    <p>Destinasi wisata, kuliner autentik, dan situs bersejarah yang memukau di ujung timur Pulau Madura</p>
+                    <div class="hero-btns">
+                        <a href="#wisata" class="btn"><i class="fas fa-compass"></i> Jelajahi Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://nativeindonesia.com/foto/2024/03/pantai-camplong-sampang.jpg');">
+                <div class="hero-content">
+                    <h1>Pantai Eksotis di Sampang</h1>
+                    <p>Temukan pesona pantai dengan pasir putih dan pemandangan menakjubkan di Sampang</p>
+                    <div class="hero-btns">
+                        <a href="#wisata" class="btn"><i class="fas fa-compass"></i> Jelajahi Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://wisato.id/wp-content/uploads/2023/04/Bukit-Jaddih.jpg');">
+                <div class="hero-content">
+                    <h1>Wisata Alam Memukau</h1>
+                    <p>Nikmati keindahan alam Sampang dari bukit kapur hingga air terjun yang menakjubkan</p>
+                    <div class="hero-btns">
+                        <a href="#wisata" class="btn"><i class="fas fa-compass"></i> Jelajahi Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-nav">
+            <button class="hero-nav-btn prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-nav-btn next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-indicators" id="heroIndicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Wisata Section -->
+    <section id="wisata">
+        <div class="container">
+            <div class="section-title">
+                <h2>Destinasi Wisata</h2>
+            </div>
+            <p class="section-subtitle">Temukan keindahan alam dan pesona wisata yang menakjubkan di Kabupaten Sampang</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="pantai">Pantai</button>
+                <button class="filter-btn" data-filter="alam">Alam</button>
+                <button class="filter-btn" data-filter="keluarga">Keluarga</button>
+            </div>
+            <div class="grid-container">
+                <!-- Item 1 -->
+                <a href="wisata/pantaicamplong.html" class="grid-item card-hover" data-category="pantai">
+                    <img src="https://nativeindonesia.com/foto/2024/03/pantai-camplong-sampang.jpg" alt="Pantai Camplong" class="item-img">
+                    <div class="item-content">
+                        <h3>Pantai Camplong</h3>
+                        <p>Pantai dengan pasir putih dan pemandangan yang menakjubkan, cocok untuk bersantai dan berenang.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Camplong</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 2 -->
+                <a href="wisata/airterjuntoroan.html" class="grid-item card-hover" data-category="alam">
+                    <img src="https://img.inews.co.id/media/600/files/inews_new/2019/03/13/madura.jpg?1552467874268" alt="Air Terjun Toroan" class="item-img">
+                    <div class="item-content">
+                        <h3>Air Terjun Toroan</h3>
+                        <p>Air terjun setinggi 25 meter yang dikelilingi hutan hijau, tempat yang sempurna untuk menikmati alam.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Banyuates</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 3 -->
+                <a href="wisata/pulaumandangin.html" class="grid-item card-hover" data-category="pantai">
+                    <img src="https://mediamadura.com/wp-content/uploads/2023/10/IMG-20231013-WA0026.jpg" alt="Pulau Mandangin" class="item-img">
+                    <div class="item-content">
+                        <h3>Pulau Mandangin</h3>
+                        <p>Pulau kecil dengan kehidupan masyarakat nelayan yang autentik dan pantai yang masih alami.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 4 -->
+                <a href="wisata/bukitjaddih.html" class="grid-item card-hover" data-category="alam">
+                    <img src="https://wisato.id/wp-content/uploads/2023/04/Bukit-Jaddih.jpg" alt="Bukit Jaddih" class="item-img">
+                    <div class="item-content">
+                        <h3>Bukit Jaddih</h3>
+                        <p>Lanskap bukit kapur yang unik dengan danau berwarna hijau toska, sering disebut "Little Cappadocia".</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Jaddih</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 5 -->
+                <a href="wisata/goalebar.html" class="grid-item card-hover" data-category="alam">
+                    <img src="https://cdn.suaranetwork.com/images/2022/08/06/b7caddb6ea4d.jpg" alt="Goa Lebar Madura" class="item-img">
+                    <div class="item-content">
+                        <h3>Goa Lebar Madura</h3>
+                        <p>Goa alami dengan formasi batu kapur yang menakjubkan dan lorong luas, menawarkan petualangan seru.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Madura</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 6 -->
+                <a href="wisata/baharigiliketapang.html" class="grid-item card-hover" data-category="pantai">
+                    <img src="https://www.bolinggo.co/wp-content/uploads/2024/08/54CE4BA3-EBF0-4D7C-8AB9-819D62FD852B.jpeg" alt="Wisata Bahari Giliketapang" class="item-img">
+                    <div class="item-content">
+                        <h3>Bahari Giliketapang</h3>
+                        <p>Destinasi wisata bahari dengan berbagai aktivitas air seperti snorkeling, diving, dan memancing.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Ketapang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.2</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 7 -->
+                <a href="wisata/aluntrunjoyo.html" class="grid-item card-hover" data-category="keluarga">
+                    <img src="https://www.suaranet.id/wp-content/uploads/2023/03/IMG-20230301-WA0236.jpg" alt="Alun Alun Trunjoyo" class="item-img">
+                    <div class="item-content">
+                        <h3>Alun Alun Trunjoyo</h3>
+                        <p>Taman kota yang asri, dilengkapi berbagai wahana rekreasi keluarga dan spot foto yang Instagramable.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Kota Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.0</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 8 -->
+                <a href="wisata/sampangwaterpark.html" class="grid-item card-hover" data-category="keluarga">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAkn8TcoSMTV5EBbdQADILLh1UFvuVa5yV-6TxkEJgBzMxaakc0QJBbXz7T2dVYLGtlF8QnXWM_lwbLuMGtfA5hYpFUny3_5HFmqBNM-3BZmqkRcDDGCHYSpt6WQNNLDNSf4XjWSIE1ZkUHq28t3BT_dh8PcBXQaDAhwbBldw13Votunqr9tDgfY-5ew/s450/RUTE%20DAN%20HTM%20SAMPANG%20WATERPARK,%20KOLAM%20RENANG%20TERBESAR%20DI%20MADURA2.png" alt="Sampang Water Park" class="item-img">
+                    <div class="item-content">
+                        <h3>Sampang Water Park</h3>
+                        <p>Sampang Water Park menawarkan keseruan air untuk segala usia dengan berbagai wahana permainan.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Kota Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kuliner Section -->
+    <section id="kuliner" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kuliner Khas</h2>
+            </div>
+            <p class="section-subtitle">Rasakan kelezatan kuliner autentik khas Sampang yang menggugah selera</p>
+            <div class="grid-container">
+                <!-- Item 1 -->
+                <a href="kuliner/satemadura.html" class="grid-item card-hover">
+                    <img src="https://cdn.suaranetwork.com/images/2025/01/17/851cdfcd7a5d.jpg" alt="Sate Madura" class="item-img">
+                    <div class="item-content">
+                        <h3>Sate Madura</h3>
+                        <p>Sate daging dengan bumbu kacang khas yang gurih, disajikan dengan lontong dan bawang merah.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Madura</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 2 -->
+                <a href="kuliner/bebeksinjay.html" class="grid-item card-hover">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2e51e3a8-b63e-458b-bebe-683bce27833a_restaurant-image_1623989121188.jpg" alt="Bebek Sinjay" class="item-img">
+                    <div class="item-content">
+                        <h3>Bebek Sinjay</h3>
+                        <p>Bebek goreng dengan bumbu rempah khas Sampang, disajikan dengan sambal terasi yang pedas.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Bangkalan</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 3 -->
+                <a href="kuliner/nasikobel.html" class="grid-item card-hover">
+                    <img src="https://img.okezone.com/content/2022/09/29/301/2677274/mengenal-nasi-kobel-makanan-nelayan-khas-sampang-madura-yang-melegenda-MFFWhwCWBU.JPG" alt="Nasi Kobel" class="item-img">
+                    <div class="item-content">
+                        <h3>Nasi Kobel</h3>
+                        <p>Nasi kobel adalah makanan khas nelayan Sampang dengan lauk ikan asin, sambal terasi, dan lalapan.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.4</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 4 -->
+                <a href="kuliner/lenolen.html" class="grid-item card-hover">
+                    <img src="https://awsimages.detik.net.id/community/media/visual/2021/03/30/lenjongan-yu-sum-2.jpeg?w=1280" alt="Len Olen" class="item-img">
+                    <div class="item-content">
+                        <h3>Len Olen</h3>
+                        <p>Len Olen khas Sampang, camilan tradisional manis dan kenyal.</p><br><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Item 5 -->
+                <a href="kuliner/nasiserpang.html" class="grid-item card-hover">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/fab55ff0-22e8-4124-b9e7-0790065010bf_0b4322c3-7248-4eb0-99a7-4b688c38c765_Go-Biz_20190624_195649.jpeg" alt="Nasi Serpang" class="item-img">
+                    <div class="item-content">
+                        <h3>Nasi Serpang</h3>
+                        <p>Nasi dengan lauk serba ikan laut khas pesisir Sampang, disajikan dengan sambal terasi pedas.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Item 6 -->
+                <a href="kuliner/sotomadura.html" class="grid-item card-hover">
+                    <img src="https://rajominang.id/blog/uploads/images/202502/image_750x_67bf5652c99c6.jpg" alt="Soto Madura" class="item-img">
+                    <div class="item-content">
+                        <h3>Soto Madura</h3>
+                        <p>Soto ayam dengan kuah kuning yang gurih, dilengkapi dengan tauge, soun, dan telur rebus.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Madura</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Item 7 -->
+                <a href="kuliner/lontongcampur.html" class="grid-item card-hover">
+                    <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/sinergimadura/2021/10/IMG-20211024-WA0004.jpg" alt="Lontong Campur" class="item-img">
+                    <div class="item-content">
+                        <h3>Lontong Campur</h3>
+                        <p>Lontong dengan campuran sayuran, telur, dan tahu dalam kuah santan dengan bumbu kacang.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.2</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Item 8 -->
+                <a href="kuliner/kueladrang.html" class="grid-item card-hover">
+                    <img src="https://pdbifiles.nos.jkt-1.neo.id/files/2018/12/13/azeee__184.jpg" alt="Kue Ladrang" class="item-img">
+                    <div class="item-content">
+                        <h3>Kue Ladrang</h3>
+                        <p>Kue tradisional berbahan dasar tepung beras dengan taburan gula merah, tekstur renyah dan manis.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Khas Sampang</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.4</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sejarah Section -->
+    <section id="sejarah">
+        <div class="container">
+            <div class="section-title">
+                <h2>Situs Bersejarah</h2>
+            </div>
+            <p class="section-subtitle">Jelajahi warisan budaya dan sejarah yang menjadi identitas Kabupaten Sampang</p>
+            <div class="grid-container">
+                <!-- Item 1 -->
+                <a href="sejarah/masjidjamisampang.html" class="grid-item card-hover">
+                    <img src="https://nativeindonesia.com/foto/2024/03/Masjid-Agung-Sampang-1.jpg" alt="Masjid Jami' Sampang" class="item-img">
+                    <div class="item-content">
+                        <h3>Masjid Jami' Sampang</h3>
+                        <p>Masjid tertua di Sampang yang dibangun pada abad ke-17 dengan arsitektur khas Madura.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Pusat Kota</span>
+                            <span><i class="fas fa-history"></i> Sejarah</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 2 -->
+                <a href="sejarah/astatinggi.html" class="grid-item card-hover">
+                    <img src="https://img.okezone.com/content/2023/06/11/519/2828822/asta-tinggi-kompleks-pemakaman-raja-raja-sumenep-punya-aura-mistis-0EOnRV2ngf.jpg" alt="Asta Tinggi" class="item-img">
+                    <div class="item-content">
+                        <h3>Asta Tinggi</h3>
+                        <p>Kompleks makam raja-raja Madura dari dinasti Cakraningrat, dengan arsitektur yang megah.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Dalpenang</span>
+                            <span><i class="fas fa-history"></i> Sejarah</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 3 -->
+                <a href="sejarah/wamassampang.html" class="grid-item card-hover">
+                    <img src="https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/radarmadura/2019/09/wisata-arsip-masyarakat-wamas-satu-satunya-di-madura_m_155727.jpg" alt="Museum Sampang" class="item-img">
+                    <div class="item-content">
+                        <h3>Wamas Sampang</h3>
+                        <p>WAMAS Sampang adalah galeri arsip digital yang berlokasi di depan kantor Disarpus Sampang.</p><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Pusat Kota</span>
+                            <span><i class="fas fa-history"></i> Budaya</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 4 -->
+                <a href="sejarah/makamratuibu.html" class="grid-item card-hover">
+                    <img src="https://cdn.rri.co.id/berita/102/images/1707362229763-2/gbbv7va7tdhixyz.jpeg" alt="Makam Ratu Ibu Sampang" class="item-img">
+                    <div class="item-content">
+                        <h3>Makam Ratu Ibu Sampang</h3>
+                        <p>Makam Ratu Ibu Sampang adalah destinasi ziarah bersejarah yang sarat nilai spiritual.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Madegen</span>
+                            <span><i class="fas fa-history"></i> Sejarah</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 5 -->
+                <a href="sejarah/makampangerantjakraningrat.html" class="grid-item card-hover">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9Mctj1gMPDD2sM0UWZ5kZY5-75rhNuQ6xuQFPKSwlF4Nv3BaZIjQ57vojPevUVrsz-hEbiiIXVJv6dWW4Hwm5jf5YsQGlMlWZgQGSSneZuw6YWfcqYpTnNDd2u7Y2O6h7sNyYZxNh8aY/s320/MAKAM+CAKRANINGRAT+IV.jpg" alt="Makam Pangeran Tjakraningrat" class="item-img">
+                    <div class="item-content">
+                        <h3>Makam Pangeran Tjakraningrat</h3>
+                        <p>Makam bersejarah pangeran Madura yang berjasa dalam perkembangan Islam di wilayah ini.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Sampang</span>
+                            <span><i class="fas fa-history"></i> Sejarah</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 6 -->
+                <a href="sejarah/situsbabarantrunojoyo.html" class="grid-item card-hover">
+                    <img src="https://www.tempatwisata.pro/users_media/3092/trunojoyo2.jpg" alt="Situs Pababaran Trunojoyo" class="item-img">
+                    <div class="item-content">
+                        <h3>Situs Pababaran Trunojoyo</h3>
+                        <p>Situs Pababaran Trunojoyo adalah tempat bersejarah yang diyakini sebagai kelahiran Pahlawan Madura.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Aeng Sareh</span>
+                            <span><i class="fas fa-history"></i> Arkeologi</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 7 -->
+                <a href="sejarah/rumahadatmadura.html" class="grid-item card-hover">
+                    <img src="https://events.rumah123.com/news-content/img/2021/01/13213826/rumah-adat-madura.jpg" alt="Rumah Adat Madura" class="item-img">
+                    <div class="item-content">
+                        <h3>Rumah Adat Madura</h3>
+                        <p>Rumah tradisional khas Madura dengan arsitektur unik yang mencerminkan kearifan lokal.</p><br><br>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Sampang</span>
+                            <span><i class="fas fa-history"></i> Budaya</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Item 8 -->
+                <a href="sejarah/monumenperjuangan.html" class="grid-item card-hover">
+                    <img src="https://media.zcreators.id/crop/0x0:0x0/750x500/photo/indizone/2023/02/22/jzs7l0j/unik-monumen-kota-ini-berbentuk-tombak-ada-3-unsur-islam-di-dalamnya61.jpg" alt="Monumen Perjuangan Sampang" class="item-img">
+                    <div class="item-content">
+                        <h3>Monumen Perjuangan Sampang</h3>
+                        <p>Monumen yang dibangun untuk mengenang perjuangan rakyat Sampang dalam mempertahankan kemerdekaan.</p>
+                        <div class="item-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Pusat Kota</span>
+                            <span><i class="fas fa-history"></i> Sejarah</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="tentang">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Sampang</h2>
+                    <p>Sampang adalah sebuah kabupaten di ujung timur Pulau Madura, Jawa Timur, yang kaya akan destinasi wisata alam, kuliner autentik, dan situs bersejarah.</p>
+                    <p>Dikenal dengan julukan "Kota Garam" karena produksi garamnya yang melimpah, Sampang menawarkan pengalaman wisata yang unik dengan kombinasi pantai yang indah, budaya yang kental, dan keramahan masyarakatnya.</p>
+                    <p>Dari Pantai Camplong yang memukau hingga situs sejarah Asta Tinggi, Sampang memiliki banyak hal untuk ditawarkan kepada para wisatawan yang ingin menjelajahi sisi lain Madura.</p>
+                    <a href="#home" class="btn" id="backToTop"><i class="fas fa-arrow-up"></i> Kembali ke Atas</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://www.tempatwisata.pro/users_media/3092/283458761_1079362166329077_8865913284375503508_n.jpg" alt="Pemandangan Sampang">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Wisata Sampang</h3>
+                    <p>Portal informasi lengkap tentang destinasi wisata, kuliner, dan situs bersejarah di Kabupaten Sampang, Madura.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="#wisata"><i class="fas fa-chevron-right"></i> Destinasi Wisata</a></li>
+                        <li><a href="#kuliner"><i class="fas fa-chevron-right"></i> Kuliner Khas</a></li>
+                        <li><a href="#sejarah"><i class="fas fa-chevron-right"></i> Situs Bersejarah</a></li>
+                        <li><a href="#tentang"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="mailto:info@wisatasampang.com"><i class="fas fa-envelope"></i> info@wisatasampang.com</a></li>
+                        <li><a href="tel:+62323123456"><i class="fas fa-phone"></i> (0323) 123456</a></li>
+                        <li><a href="https://maps.app.goo.gl/example" target="_blank"><i class="fas fa-map-marker-alt"></i> Jl. Rajawali No. 10, Sampang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Jam Operasional</h3>
+                    <ul>
+                        <li><i class="far fa-clock"></i> Senin - Jumat: 9:00 - 17:00</li>
+                        <li><i class="far fa-clock"></i> Sabtu: 9:00 - 15:00</li>
+                        <li><i class="far fa-clock"></i> Minggu: Tutup</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 14px; color: #ffffff;">
+    &copy; 2025 <strong>Wisata Sampang</strong> | Dirancang dengan 
+    <i class="fas fa-heart" style="color: #e63946;"></i> 
+    oleh <a href="https://mohamadalvinmakmun.github.io/" target="_blank" style="text-decoration: none; font-weight: 600; color:#0077ff;">
+        Mohamad Alvin Makmun
+    </a> untuk <strong>Sampang</strong>
+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
