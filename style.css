@@ -13,11 +13,6 @@
     --section-padding: 80px 0;
 }
 
-
-
-
-
-
 /* ===== RESET & BASE STYLES ===== */
 * {
     margin: 0;
@@ -326,9 +321,8 @@ nav ul li a.active {
     color: white;
     opacity: 0;
     transition: opacity 1s ease;
-    /* Parallax effect */
     transform: translateY(0);
-    will-change: transform; /* Optimize for animation */
+    will-change: transform;
 }
 
 .slide.active {
@@ -430,7 +424,7 @@ nav ul li a.active {
     transform: scale(1.2);
 }
 
-/* ===== GRID LAYOUT ===== */
+/* ===== GRID LAYOUT (UPDATED FOR FLEX ALIGNMENT) ===== */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -446,9 +440,13 @@ nav ul li a.active {
     position: relative;
     opacity: 0;
     transform: translateY(20px);
-    display: block; /* Ensure it's a block element for proper linking */
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit text color */
+
+    /* 🔥 Flexbox ditambahkan di sini agar item rata bawah 🔥 */
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+    color: inherit;
 }
 
 .grid-item.visible {
@@ -474,6 +472,11 @@ nav ul li a.active {
 
 .item-content {
     padding: 20px;
+
+    /* 🔥 Konten Card dibuat flex dan mengisi penuh ruang sisa 🔥 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .item-content h3 {
@@ -487,6 +490,9 @@ nav ul li a.active {
     font-size: 0.95rem;
     margin-bottom: 15px;
     line-height: 1.6;
+
+    /* 🔥 Paragraf dibuat memanjang agar sisa ruang dihabiskan di sini 🔥 */
+    flex-grow: 1;
 }
 
 .item-meta {
@@ -504,6 +510,32 @@ nav ul li a.active {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+/* ===== Tombol Lihat Selengkapnya ===== */
+.read-more-btn {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Efek saat Card di-hover */
+.grid-item:hover .read-more-btn {
+    color: var(--accent);
+}
+
+.grid-item:hover .read-more-btn i {
+    transform: translateX(5px);
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -700,7 +732,6 @@ footer::before {
 }
 
 /* ===== INOVASI BARU ===== */
-/* Glassmorphism Effect */
 .glass-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -708,7 +739,6 @@ footer::before {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Gradient Text */
 .gradient-text {
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -716,7 +746,6 @@ footer::before {
     background-clip: text;
 }
 
-/* Floating Animation */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -726,7 +755,6 @@ footer::before {
     animation: float 5s ease-in-out infinite;
 }
 
-/* Card Hover Effects */
 .card-hover {
     transition: all 0.3s ease;
     position: relative;
@@ -750,7 +778,7 @@ footer::before {
 
 /* Detail Page Styles */
 .detail-page {
-    padding-top: 120px; /* Adjust for fixed header */
+    padding-top: 120px;
     background-color: var(--light-bg);
 }
 
@@ -867,7 +895,6 @@ footer::before {
     transform: scale(1.03);
 }
 
-/* Back button for detail pages */
 .back-button {
     display: inline-flex;
     align-items: center;
@@ -887,13 +914,11 @@ footer::before {
     transform: translateY(-3px);
 }
 
-
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1200px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
-    
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -903,7 +928,6 @@ footer::before {
     .header-content {
         padding: 12px 0;
     }
-    
     nav ul {
         display: none;
         position: absolute;
@@ -915,41 +939,32 @@ footer::before {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         padding: 15px 0;
     }
-    
     nav ul.show {
         display: flex;
     }
-    
     nav ul li {
         margin: 0;
         text-align: center;
     }
-    
     nav ul li a {
         padding: 12px 20px;
         justify-content: center;
     }
-    
     .mobile-menu-btn {
         display: block;
     }
-    
     .hero h1 {
         font-size: 2.5rem;
     }
-    
     .about-content {
         flex-direction: column;
     }
-    
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .hero-nav {
         padding: 0 15px;
     }
-
     .detail-image img {
         height: 300px;
     }
@@ -959,54 +974,43 @@ footer::before {
     .hero h1 {
         font-size: 2.2rem;
     }
-    
     .hero p {
         font-size: 1.1rem;
     }
-    
     .section-title h2 {
         font-size: 2rem;
     }
-    
     .grid-container {
         grid-template-columns: 1fr;
     }
-    
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
     .hero-btns {
         flex-direction: column;
         align-items: center;
     }
-    
     .hero-btns .btn {
         width: 100%;
         max-width: 300px;
         justify-content: center;
     }
-    
     .hero-nav-btn {
         width: 38px;
         height: 38px;
     }
-    
     .back-to-top {
         bottom: 15px;
         right: 15px;
         width: 40px;
         height: 40px;
     }
-
     .detail-header h1 {
         font-size: 2.5rem;
     }
-
     .detail-info h2 {
         font-size: 1.8rem;
     }
-
     .detail-image img {
         height: 250px;
     }
@@ -1016,36 +1020,28 @@ footer::before {
     .hero h1 {
         font-size: 1.8rem;
     }
-    
     .section-title h2 {
         font-size: 1.7rem;
     }
-    
     .btn {
         padding: 12px 25px;
     }
-    
     .about-text h2 {
         font-size: 1.8rem;
     }
-    
     .filter-buttons {
         gap: 8px;
     }
-    
     .filter-btn {
         padding: 7px 12px;
         font-size: 0.9rem;
     }
-
     .detail-header h1 {
         font-size: 2rem;
     }
-
     .detail-info h2 {
         font-size: 1.5rem;
     }
-
     .detail-image img {
         height: 200px;
     }
